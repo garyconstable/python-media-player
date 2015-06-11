@@ -1,0 +1,368 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pk",
+				"pktPrint"
+			],
+			[
+				"pr",
+				"printRecord"
+			],
+			[
+				"an",
+				"anonLogin"
+			],
+			[
+				"anon",
+				"anonLogin"
+			],
+			[
+				"ftp",
+				"ftplib"
+			],
+			[
+				"re",
+				"realease"
+			],
+			[
+				"so",
+				"songText"
+			],
+			[
+				"next",
+				"nextText"
+			],
+			[
+				"Im",
+				"ImageFilter"
+			],
+			[
+				"P",
+				"png"
+			],
+			[
+				"im",
+				"import"
+			],
+			[
+				"img",
+				"imgFile"
+			],
+			[
+				"send",
+				"send_command"
+			],
+			[
+				"pro",
+				"PROMPT"
+			],
+			[
+				"ssh",
+				"ssh_newkey"
+			],
+			[
+				"con",
+				"connStr"
+			],
+			[
+				"po",
+				"port_for"
+			],
+			[
+				"db",
+				"db_attempt"
+			],
+			[
+				"connect",
+				"connectDb"
+			],
+			[
+				"last",
+				"lastScanned"
+			],
+			[
+				"conn",
+				"connectDb"
+			],
+			[
+				"tgt",
+				"tgtPort"
+			],
+			[
+				"tg",
+				"tgtHost"
+			],
+			[
+				"inser",
+				"insertOpenPort"
+			],
+			[
+				"n",
+				"None"
+			],
+			[
+				"c",
+				"cur"
+			],
+			[
+				"ss",
+				"ssh_cmd"
+			],
+			[
+				"ip",
+				"ip_address"
+			],
+			[
+				"nm",
+				"nmapScan"
+			],
+			[
+				"fire",
+				"firebase_url"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"port",
+				"portList"
+			],
+			[
+				"a",
+				"aquire"
+			],
+			[
+				"check",
+				"check_thread"
+			],
+			[
+				"current",
+				"current_song"
+			],
+			[
+				"mute",
+				"volume_mute"
+			],
+			[
+				"volume",
+				"volume_mute"
+			],
+			[
+				"v",
+				"volume"
+			],
+			[
+				"vo",
+				"volume_down"
+			],
+			[
+				"volume_",
+				"volume_up"
+			],
+			[
+				"Image",
+				"ImageTk"
+			],
+			[
+				"max",
+				"maxHeight"
+			],
+			[
+				"ma",
+				"maxHeight"
+			],
+			[
+				"sr",
+				"src"
+			],
+			[
+				"s",
+				"stream"
+			],
+			[
+				"pl",
+				"playStream"
+			],
+			[
+				"com",
+				"commit"
+			],
+			[
+				"get",
+				"getHTML"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"sli",
+				"slideSpeed"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Volumes/GARY-USB/python/0009-mediaplayer/mplayer.py",
+		"/Users/gary/Desktop/code/vhosts/0085-results_rna/mails/en/account.html",
+		"/Volumes/GARY-USB/python/0003-violent/0006-brute-force-ssh/clean.py",
+		"/Volumes/GARY-USB/python/0001-mediaplayer/text.py",
+		"/Users/gary/Desktop/code/vhosts/0058-bikefeeds/public/assets/feeds/lib/db.php",
+		"/Users/gary/Desktop/code/vhosts/0058-bikefeeds/public/assets/feeds/lib/config.php",
+		"/Volumes/GARY-USB/python/0003-violent/0003/scanner_loop.py",
+		"/Users/gary/Desktop/scanner.py",
+		"/Users/gary/Desktop/fb.py",
+		"/Users/gary/Desktop/web/vhosts/0080-opencv/0004-mat/CMakeLists.txt",
+		"/Users/gary/Desktop/web/vhosts/0080-opencv/README.md",
+		"/Users/gary/Desktop/0037-vps_2014-02-16.sql"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"(5th june)",
+			"\\\"",
+			"potato",
+			"clocktower",
+			"ac",
+			"imgFile",
+			"connectDb",
+			"get_process_info",
+			"call_after_restart_list",
+			"remo",
+			"directories_to_build",
+			"hover-size-",
+			"ss-tile-hover-content-wrapper",
+			"data-hover-bg-colo",
+			"ss-tile-caption-inner",
+			"load",
+			"_build_directory",
+			"directories_to_build",
+			"AF_INET",
+			"form",
+			"hosting5",
+			"console.log"
+		],
+		"highlight": true,
+		"in_selection": true,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 293.0,
+	"status_bar_visible": true
+}
