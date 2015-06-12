@@ -1,11 +1,17 @@
 
 
-# --> imports
+
 
 from touch import *
+from mpc import *
 
+try:
+	# for Python2
+	from Tkinter import *
+except ImportError:
+	# for Python3
+	from tkinter import * 
 
-from tkinter import * 
 
 import PIL
 from PIL import Image
@@ -17,6 +23,8 @@ import threading
 from time import sleep
 
 
+
+media_player_control = mpc(volume=50)
 
 
 
@@ -80,8 +88,7 @@ touch_config = {
 maxWidth  	 = "320"
 maxHeight 	 = "240"
 imgFile   	 = "images/skin.gif"
-volume    	 = 0
-volume_mute	 = 0
+
 root		 = 0
 songText     = "Most relationships seem so transitory"
 canvas       = ''
@@ -94,6 +101,7 @@ current_song = ''
 
 
 # ---> functions
+'''
 def play():
 	print ("----> play")
 	subprocess.check_output("mpc play", shell=True)
@@ -126,6 +134,7 @@ def volume_down():
 	if volume != 0:
 		volume -= 10
 		subprocess.check_output("mpc volume " + str(volume), shell=True)
+'''
 
 def queueText(displayText):
 	global current_song
@@ -153,6 +162,7 @@ def get_current_song():
 	canvas.delete(current_song)
 	queueText(songText);	
 
+'''
 def prev():
 	print ("----> prev")
 	subprocess.check_output("mpc prev", shell=True)
@@ -163,6 +173,9 @@ def next():
 
 def exit():
 	closeApp()
+
+'''
+
 
 
 
@@ -196,23 +209,39 @@ def updateGUI():
 
 
 def clickCallback(event):    
+	
+	#get the click event button
 	t = touch(touch_config)
 	t.onClick({'x' : event.x, 'y' : event.y})
+
+	#get the method to call
 	method = t.onClick({'x' : event.x, 'y' : event.y})
-	globals()[method]()
+ 	
+ 	#call the method
+ 	methodToCall = getattr( media_player_control, str(method) )
+
+ 	#try and call the method using global or class call
+	try:
+		result = methodToCall()
+	except AttributeError:
+		globals()[method]()
+	except TypeError:
+		globals()[method]()
+
+
+
+	
 
 
 def main():
 
-	global volume
-	global volume_mute
+
 	global root
 	global songText
 	global canvas
 	global current_song
 
-	volume = 50
-	volume_mute = volume
+
 
 	try:
 		subprocess.check_output("mpc volume " + str(volume), shell=True)
