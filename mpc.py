@@ -14,22 +14,27 @@ class mpc():
 		self.setVolume(volume)
 		self.gui = GUI
 
+		self.playing = False
+
 	def clearConsole(self):
 		subprocess.check_output("clear", shell=True)
 
 	def play(self):
 		print ("----> play")
 		subprocess.check_output("mpc play", shell=True)
+		self.playing = True
 
 
 	def stop(self):
 		print ("----> stop")
 		subprocess.check_output("mpc stop", shell=True)
+		self.playing = False
 
 
 	def pause(self):
 		print ("----> pause")
 		subprocess.check_output("mpc pause", shell=True)
+		self.playing = False
 
 
 	def mute(self):

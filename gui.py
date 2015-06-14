@@ -3,6 +3,7 @@
 import PIL
 import subprocess
 import threading
+import datetime
 
 try:
 	from Tkinter import *
@@ -14,10 +15,12 @@ from mpc import *
 from subprocess import *
 from time import sleep
 
+
+
 class gui():
 
 
-	def __init__(self, master = None):
+	def __init__(self, master = None ):
 
 		self.maxWidth  	  = 320
 		self.maxHeight 	  = 240
@@ -25,6 +28,9 @@ class gui():
 		self.songText     = ""
 		self.root		  = master
 		self.canvas       = None
+
+		self.dateTime 	  = None
+		self.volumeTxt 	  = None
 		
 		self.mpc 		  = mpc(10, self)
 		self.touch_config = { 
@@ -110,44 +116,88 @@ class gui():
 
 
 	def updateGUI(self):
-	    t = threading.Thread(target=self.check_thread, args=() )
-	    t.daemon = True
-	    t.start()
-	    #t.join()
+	    self.t = threading.Thread(target=self.check_thread, args=() )
+	    self.t.daemon = True
+	    self.t.start()
+
+	    self.x = threading.Thread(target=self.check_thread_now, args=() )
+	    self.x.daemon = True
+	    self.x.start()
+	    
 
 
 	def check_thread(self):
-		self.get_current_song()
-		sleep(2.00)
+		self.queueText()
 		try:
 			self.check_thread()
 		except:
 			print ("----> exception start new Thread")
+			#self.t.join()
 			self.updateGUI()
 
 
-	def get_current_song(self):
-		songText = self.mpc.getSong()
-		self.canvas.delete(self.current_song)
-		self.queueText(songText)
+	def check_thread_now(self):
+		self.writeItems()
+		sleep(1)
+		try:
+			self.check_thread_now()
+		except:
+			print ("----> exception start new Thread now() ")
+			#self.x.join()
+			self.updateGUI()
 
 
-	def queueText(self, displayText):
-	
-		#create a refernce to the song text
-		newText = displayText;
 
-		for x in range(0, len(displayText) ):
-			#remove from the beginning
-			newText = newText[1:]
+	def queueText(self):
+		
+		if(self.mpc.playing == True):
 
-			#trimmed new val max chars 40
-			trimmedVal = newText[:38]
-
-			#remove the current text and display new val
+			songText = self.mpc.getSong()
 			self.canvas.delete(self.current_song)
-			self.current_song = self.canvas.create_text(30, 20,  anchor="nw", fill="white", font="Purisa",text=trimmedVal)
-			sleep(0.08)
+
+			displayText = songText
+
+			#create a refernce to the song text
+			newText = displayText
+
+			for x in range(0, len(displayText) ):
+				#remove from the beginning
+				newText = newText[1:]
+
+				#trimmed new val max chars 40
+				trimmedVal = newText[:38]
+
+				#remove the current text and display new val
+				self.canvas.delete(self.current_song)
+				self.current_song = self.canvas.create_text(30, 40,  anchor="nw", fill="white", font="Purisa",text=trimmedVal)
+				sleep(0.12)
+
+			self.current_song = self.canvas.create_text(30, 40,  anchor="nw", fill="white", font="Purisa",text=displayText[:38])
+			sleep(10)
+
+		else:
+			sleep(1)
+
+
+	def writeItems(self):
+		
+		'''
+		date time
+		'''
+		self.canvas.delete(self.dateTime)
+		current_time = datetime.datetime.now().strftime('%H:%M  %d.%m.%Y')
+		self.dateTime = self.canvas.create_text( 30, 20,  anchor="nw", fill="white", font="Purisa", text=current_time)
+
+		'''
+		volume
+		'''
+		self.canvas.delete(self.volumeTxt)
+		volume = 'Volume: ' + str(self.mpc.volume) + '%'
+		self.volumeTxt = self.canvas.create_text( 30, 63,  anchor="nw", fill="white", font="Purisa", text=volume)
+
+
+
+
 
 
 	def exit(self):

@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"ex",
+				"except"
+			],
+			[
+				"print",
+				"printScreen"
+			],
+			[
+				"se",
+				"setVolume"
+			],
+			[
+				"st",
+				"stop"
+			],
+			[
 				"pk",
 				"pktPrint"
 			],
@@ -207,6 +223,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Volumes/GARY-USB/python/0009-mediaplayer/mplayer.py",
+			"settings":
+			{
+				"buffer_size": 382,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Volumes/GARY-USB/python/0009-mediaplayer/gui.py",
+			"settings":
+			{
+				"buffer_size": 4298,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Volumes/GARY-USB/python/0009-mediaplayer/mpc.py",
+			"settings":
+			{
+				"buffer_size": 1866,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Volumes/GARY-USB/python/0009-mediaplayer/.gitignore",
+			"settings":
+			{
+				"buffer_size": 23,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -232,6 +280,7 @@
 	},
 	"file_history":
 	[
+		"/Volumes/GARY-USB/python/0009-mediaplayer/.gitignore",
 		"/Volumes/GARY-USB/python/0009-mediaplayer/mplayer.py",
 		"/Users/gary/Desktop/code/vhosts/0085-results_rna/mails/en/account.html",
 		"/Volumes/GARY-USB/python/0003-violent/0006-brute-force-ssh/clean.py",
@@ -261,6 +310,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"queueText",
+			"time",
+			"current_song",
+			"Get Song",
+			"self.current_song = ca",
+			"self.mpc",
+			"touch",
+			"getSoung",
 			"(5th june)",
 			"\\\"",
 			"potato",
@@ -285,7 +342,7 @@
 			"console.log"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -302,8 +359,116 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Volumes/GARY-USB/python/0009-mediaplayer/mplayer.py",
+					"settings":
+					{
+						"buffer_size": 382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Volumes/GARY-USB/python/0009-mediaplayer/gui.py",
+					"settings":
+					{
+						"buffer_size": 4298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4069,
+								4069
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3304.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Volumes/GARY-USB/python/0009-mediaplayer/mpc.py",
+					"settings":
+					{
+						"buffer_size": 1866,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								685,
+								591
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 118.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Volumes/GARY-USB/python/0009-mediaplayer/.gitignore",
+					"settings":
+					{
+						"buffer_size": 23,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23,
+								23
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
