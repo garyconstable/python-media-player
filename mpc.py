@@ -8,14 +8,23 @@ mpc class - wrapper to control mpc
 
 class mpc():
 
-	def __init__(self, volume=50):
+	def __init__(self, volume=50, GUI=None):
 		self.volume = volume
 		self.volume_mute = self.volume
+		self.setVolume(volume)
+		self.gui = GUI
 
+	def clearConsole(self):
+		subprocess.check_output("clear", shell=True)
 
 	def play(self):
 		print ("----> play")
 		subprocess.check_output("mpc play", shell=True)
+
+
+	def stop(self):
+		print ("----> stop")
+		subprocess.check_output("mpc stop", shell=True)
 
 
 	def pause(self):
@@ -55,5 +64,22 @@ class mpc():
 	def next(self):
 		print ("----> next")
 		subprocess.check_output("mpc next", shell=True)
+
+
+	def setVolume(self, volume=0):
+		try:
+			print ("----> Set volume: " + str(volume))
+			subprocess.check_output("mpc volume " + str(volume), shell=True)
+		except (RuntimeError, TypeError, NameError):
+			pass
+
+	def getSong(self):
+		return subprocess.check_output("mpc current", shell=True)
+
+
+	def exit(self):
+		print ("----> exit")
+		self.stop()
+		self.gui.root.destroy()
 
 
