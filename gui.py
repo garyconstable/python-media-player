@@ -142,7 +142,7 @@ class gui():
 			newText = newText[1:]
 
 			#trimmed new val max chars 40
-			trimmedVal = newText[:40]
+			trimmedVal = newText[:38]
 
 			#remove the current text and display new val
 			self.canvas.delete(self.current_song)
