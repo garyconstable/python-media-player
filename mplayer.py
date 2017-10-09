@@ -14,6 +14,10 @@ def main():
 
 	root = Tk()
 	image  = ImageTk.PhotoImage(PIL.Image.open("images/skin.gif"))
+	
+	#root = Tk()
+	#tmp = PIL.Image.open('images/skin2.png').convert("RGB")
+	#image  = ImageTk.PhotoImage(tmp)
 
 	media_player_gui = gui(root)
 	media_player_gui.init(image)
