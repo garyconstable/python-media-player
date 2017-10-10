@@ -76,6 +76,7 @@ class gui():
 				'y_max'	: 229
 			},
 		}
+		
 		self.mpc.stop()
 		self.mpc.clearConsole()
 
