@@ -1,32 +1,33 @@
 
-
-try:
-	from Tkinter import *
-except ImportError:
-	from tkinter import * 
-
-from PIL import Image
-from PIL import ImageTk
+import pygame
 from gui import *
 
-
 def main():
+	pygame.init()
+	screen = pygame.display.set_mode((320, 240))
+	done = False
+	myimage = pygame.image.load("images/skin.png")
+	imagerect = myimage.get_rect()
+	player = gui(screen)
+	mp = mpc(0)
 
-	root = Tk()
-	image  = ImageTk.PhotoImage(PIL.Image.open("images/skin.gif"))
-	
-	#root = Tk()
-	#png = PIL.Image.open('images/skin.gif').convert("RGBA")
-	#png.load()
-	
-	#root = Tk()
-	#tmp = PIL.Image.open('images/skin2.png').convert("RGB")
-	#image  = ImageTk.PhotoImage(tmp)
+	while not done:
+		for event in pygame.event.get():
+			if event.type == pygame.QUIT:
+				done = True
+			elif event.type == pygame.KEYDOWN:
+				if event.key == pygame.K_ESCAPE:
+					done = True
+			elif event.type == pygame.MOUSEBUTTONUP:
+				Mouse_x, Mouse_y = pygame.mouse.get_pos()
+				print [Mouse_x, Mouse_y]
+				player.clickCallback(Mouse_x, Mouse_y)
 
-	media_player_gui = gui(root)
-	media_player_gui.init(image)
-	media_player_gui.updateGUI()
-	media_player_gui.run()
+		screen.fill((0,0,0))
+		screen.blit(myimage, imagerect)
+		pygame.display.flip()
+
+	mp.exit()
 
 if __name__ == '__main__':
 	main()
