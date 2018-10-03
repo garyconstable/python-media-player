@@ -12,16 +12,16 @@ def main():
 	mp = mpc(0)
 
 	while not done:
-		for event in pygame.event.get():
-			if event.type == pygame.QUIT:
+		event = pygame.event.wait()
+		if event.type == pygame.QUIT:
+			done = True
+		elif event.type == pygame.KEYDOWN:
+			if event.key == pygame.K_ESCAPE:
 				done = True
-			elif event.type == pygame.KEYDOWN:
-				if event.key == pygame.K_ESCAPE:
-					done = True
-			elif event.type == pygame.MOUSEBUTTONUP:
-				Mouse_x, Mouse_y = pygame.mouse.get_pos()
-				print [Mouse_x, Mouse_y]
-				player.clickCallback(Mouse_x, Mouse_y)
+		elif event.type == pygame.MOUSEBUTTONUP:
+			Mouse_x, Mouse_y = pygame.mouse.get_pos()
+			print [Mouse_x, Mouse_y]
+			player.clickCallback(Mouse_x, Mouse_y)
 
 		screen.fill((0,0,0))
 		screen.blit(myimage, imagerect)

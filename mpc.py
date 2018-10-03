@@ -58,12 +58,18 @@ class mpc():
 			subprocess.check_output(cmd, shell=True)
 
 	def prev(self):
-		print ("----> prev")
-		subprocess.check_output("mpc prev", shell=True)
+		try:
+			print ("----> prev")
+			subprocess.check_output("mpc prev", shell=True)
+		except (RuntimeError, TypeError, NameError, CalledProcessError):
+			pass
 
 	def next(self):
-		print ("----> next")
-		subprocess.check_output("mpc next", shell=True)
+		try:
+			print ("----> next")
+			subprocess.check_output("mpc next", shell=True)
+		except (RuntimeError, TypeError, NameError, CalledProcessError):
+			pass
 
 	def setVolume(self, volume=0):
 		try:
