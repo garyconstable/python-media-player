@@ -4,7 +4,7 @@ from gui import *
 
 def main():
 	pygame.init()
-	screen = pygame.display.set_mode((320, 240))
+	screen = pygame.display.set_mode((320, 240), pygame.FULLSCREEN)
 	done = False
 	myimage = pygame.image.load("images/skin.png")
 	imagerect = myimage.get_rect()
